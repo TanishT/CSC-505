@@ -28,7 +28,7 @@ class Elephant extends Mammal {
 
 }
 
-public class question2 {
+public class question3 {
     public static void main(String[] args) {
         Animal a1 = new Animal(); //not going to work b/c cant declare a an object of an abstract class
         Animal a2 = new Squirrel();

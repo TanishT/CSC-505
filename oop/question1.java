@@ -30,8 +30,7 @@ class Elephant extends Mammal {
 
 public class question1 {
     public static void main(String[] args)  {
-        ArrayList<Reptile> a = new ArrayList<Lizard>();
-        ArrayList<Lizard> b = new ArrayList<Reptile>();
-        /* arraylist reptile creates a new class of array that assigns all the types to reptile. that cant be changed to lizard. same thing with the second problem*/
+        ArrayList<Reptile> a = new ArrayList<Lizard>(); //types have to match
+        ArrayList<Lizard> b = new ArrayList<Reptile>(); //not all reptiles are lizards
     }
 }
