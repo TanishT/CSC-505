@@ -8,5 +8,8 @@ public class Tester
 		Vehicle v = new Auto(1,2,3);
 		v.move();
 		System.out.println(v);
+
+		Bicycle b = new Bicycle(2, 5);
+		System.out.println(b.toString());
 	}
 }

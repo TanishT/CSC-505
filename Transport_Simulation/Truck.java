@@ -10,6 +10,7 @@ public class Truck extends Auto
 		haul = new ArrayList<String>();
 	}
 	
+	@Override
 	public void move()
 	{
 		super.move();
