@@ -13,8 +13,8 @@ public class TransportSim {
 
   public void addVehicle(Vehicle v)
   {
-     //put Vehicle v into the ArrayList, vehicles
-
+    //put Vehicle v into the ArrayList, vehicles
+    this.vehicles.add(v);
   }
 
   public void loadTrucks(String item)
