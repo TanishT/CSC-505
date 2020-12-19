@@ -22,8 +22,13 @@ public class Tester
 		//testing code for addVehicle 
 		v = new Auto(1,333,4);
 		test.addVehicle(v);
-		System.out.println(test.print());
+		//System.out.println(test.print());
 
+		//testing code for loadTrucks
+		v = new Truck(1,2,3);
+		test.addVehicle(v);
+		test.loadTrucks("truck is here");
+		test.print();
 
 	}
 }

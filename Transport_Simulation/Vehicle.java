@@ -16,8 +16,8 @@ public abstract class Vehicle
 	
 	public abstract int getTopSpeed();
 	
-	public String toString()
+	public void print()
 	{
-		return "Position: " + position + " Speed: " + speed;
+		System.out.println("Position: " + position + " Speed: " + speed);
 	}
 }

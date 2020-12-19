@@ -26,9 +26,9 @@ public class Auto extends Vehicle
 		return 55;
 	}
 	
-	public String toString()
+	public void print()
 	{
-		String out = super.toString() + " Fuel: " + fuel;
-		return out;
+		super.print();
+		System.out.print("Fuel: " + fuel + " ");
 	}
 }

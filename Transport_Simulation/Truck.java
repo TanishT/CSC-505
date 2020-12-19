@@ -22,4 +22,11 @@ public class Truck extends Auto
 	{
 		haul.add(item);
 	}
+
+	public void print() {
+		super.toString();
+		for (String item : haul) {
+			System.out.print("item: " + item + " , ");
+		}
+	}
 }

@@ -10,8 +10,8 @@ public class Bicycle extends Vehicle
         return 0;
     }
 
-    public String toString() {
-        return super.toString();
+    public void print() {
+        System.out.println(super.toString());
     }
 	
 }
