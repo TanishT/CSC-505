@@ -20,6 +20,12 @@ public class TransportSim {
   public void loadTrucks(String item)
   {
     //load the param item into all trucks in the simulation
+    for (Vehicle v : vehicles) {
+      if (v instanceof Truck) {
+        //need to add to param item
+        ((Truck) v).load(item);
+      }
+    }
   }
 
   public void step()
@@ -32,8 +38,16 @@ public class TransportSim {
     //run the simulation 'steps' times
   }
 
-  public ArrayList<Vehicle> print()
+  public void print()
   {
-    return vehicles;
+    for (Vehicle v : vehicles) {
+      if (v instanceof Truck) {
+        ((Truck) v).print();
+      } else if (v instanceof Bicycle) {
+        ((Bicycle) v).print();
+      } else if (v instanceof Auto) {
+        ((Auto) v).print();
+      }
+    }
   }
 }
