@@ -7,7 +7,7 @@ public class Truck extends Auto
 	public Truck(int p, int s, int f)
 	{
 		super(p,s,f);
-		haul = new ArrayList<String>();
+		this.haul = new ArrayList<String>();
 	}
 	
 	@Override
@@ -20,12 +20,12 @@ public class Truck extends Auto
 	
 	public void load(String item)
 	{
-		haul.add(item);
+		this.haul.add(item);
 	}
 
 	public void print() {
 		super.print();
-		for (String item : haul) {
+		for (String item : this.haul) {
 			System.out.print("item: " + item + " , ");
 		}
 	}

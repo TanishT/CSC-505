@@ -5,19 +5,19 @@ public abstract class Vehicle
 	
 	public Vehicle(int p, int s)
 	{
-		position = p;
-		speed = s;
+		this.position = p;
+		this.speed = s;
 	}
 	
 	public void move()
 	{
-		position += speed;
+		this.position += this.speed;
 	}
 	
 	public abstract int getTopSpeed();
 	
 	public void print()
 	{
-		System.out.println("Position: " + position + " Speed: " + speed);
+		System.out.println("Position: " + this.position + " Speed: " + this.speed);
 	}
 }

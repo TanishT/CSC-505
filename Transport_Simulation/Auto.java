@@ -5,20 +5,20 @@ public class Auto extends Vehicle
 	public Auto(int p, int s, int f)
 	{
 		super(p,s);
-		fuel = f;
+		this.fuel = f;
 	}
 	public void move()
 	{
-		if (fuel > 0)
+		if (this.fuel > 0)
 		{
 			super.move();
-			fuel--;
+			this.fuel--;
 		}
 	}
 	
 	public void refuel()
 	{
-		fuel++;
+		this.fuel++;
 	}
 	
 	public int getTopSpeed()
@@ -29,6 +29,6 @@ public class Auto extends Vehicle
 	public void print()
 	{
 		super.print();
-		System.out.print("Fuel: " + fuel + " ");
+		System.out.print("Fuel: " + this.fuel + " ");
 	}
 }
