@@ -24,7 +24,7 @@ public class Truck extends Auto
 	}
 
 	public void print() {
-		super.toString();
+		super.print();
 		for (String item : haul) {
 			System.out.print("item: " + item + " , ");
 		}
