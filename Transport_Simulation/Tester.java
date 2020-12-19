@@ -28,12 +28,15 @@ public class Tester
 		v = new Truck(1,2,3);
 		test.addVehicle(v);
 		test.loadTrucks("truck is here");
-		test.print();
 
 		//testing code for step method
 		test.step();
+		//System.out.println("\n\n");
+		//test.print();
+		
+		//testing code for run method
+		test.run(5);
 		System.out.println("\n\n");
 		test.print();
-
 	}
 }

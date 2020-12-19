@@ -45,6 +45,17 @@ public class TransportSim {
   public void run(int steps)
   {
     //run the simulation 'steps' times
+    for (int i = 0; i < steps; i++) {
+      for (Vehicle v : vehicles) {
+        if (v instanceof Truck) {
+          ((Truck) v).move();
+        } else if (v instanceof Bicycle) {
+          ((Bicycle) v).move();
+        } else if (v instanceof Auto) {
+          ((Auto) v).move();
+        }
+      }
+    }
   }
 
   public void print()
