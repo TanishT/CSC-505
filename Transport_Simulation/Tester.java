@@ -30,5 +30,10 @@ public class Tester
 		test.loadTrucks("truck is here");
 		test.print();
 
+		//testing code for step method
+		test.step();
+		System.out.println("\n\n");
+		test.print();
+
 	}
 }

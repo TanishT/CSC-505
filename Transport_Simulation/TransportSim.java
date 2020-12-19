@@ -31,6 +31,15 @@ public class TransportSim {
   public void step()
   {
     //instruct all vehicles in the simulation to move once
+    for (Vehicle v : vehicles) {
+      if (v instanceof Truck) {
+        ((Truck) v).move();
+      } else if (v instanceof Bicycle) {
+        ((Bicycle) v).move();
+      } else if (v instanceof Auto) {
+        ((Auto) v).move();
+      }
+    }
   }
 
   public void run(int steps)
