@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Tester
 {
 	public static void main(String[] args)
@@ -7,9 +9,15 @@ public class Tester
 		
 		Vehicle v = new Auto(1,2,3);
 		v.move();
-		System.out.println(v);
 
 		Bicycle b = new Bicycle(2, 5);
-		System.out.println(b.toString());
+		ArrayList<Vehicle> list = new ArrayList<Vehicle>();
+		for (int i = 0; i < 10; i++) {
+			list.add(v);
+		}
+		
+		TransportSim test = new TransportSim(list);
+		System.out.println(test.print());
+
 	}
 }

@@ -2,11 +2,13 @@ import java.util.ArrayList;
 
 public class TransportSim {
 
-  private ArrayList<Vehicle> vehicles;
+  private ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
 
-  public TransportSim()
-  {
+  public TransportSim(ArrayList<Vehicle> in){
     //complete the constructor
+    for (Vehicle v : in) {
+      this.vehicles.add(v);
+    }
   }
 
   public void addVehicle(Vehicle v)
@@ -30,9 +32,8 @@ public class TransportSim {
     //run the simulation 'steps' times
   }
 
-  public String toString()
+  public ArrayList<Vehicle> print()
   {
-    //What do you think this should look like?
-    return "TODO";
+    return vehicles;
   }
 }
