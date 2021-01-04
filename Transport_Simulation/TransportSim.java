@@ -11,14 +11,12 @@ public class TransportSim {
     }
   }
 
-  public void addVehicle(Vehicle v)
-  {
+  public void addVehicle(Vehicle v){
     //put Vehicle v into the ArrayList, vehicles
     this.vehicles.add(v);
   }
 
-  public void loadTrucks(String item)
-  {
+  public void loadTrucks(String item){
     //load the param item into all trucks in the simulation
     for (Vehicle v : vehicles) {
       if (v instanceof Truck) {
@@ -28,8 +26,7 @@ public class TransportSim {
     }
   }
 
-  public void step()
-  {
+  public void step(){
     //instruct all vehicles in the simulation to move once
     for (Vehicle v : vehicles) {
       if (v instanceof Truck) {
@@ -42,24 +39,14 @@ public class TransportSim {
     }
   }
 
-  public void run(int steps)
-  {
+  public void run(int steps){
     //run the simulation 'steps' times
     for (int i = 0; i < steps; i++) {
-      for (Vehicle v : vehicles) {
-        if (v instanceof Truck) {
-          ((Truck) v).move();
-        } else if (v instanceof Bicycle) {
-          ((Bicycle) v).move();
-        } else if (v instanceof Auto) {
-          ((Auto) v).move();
-        }
-      }
+      step();
     }
   }
 
-  public void print()
-  {
+  public void print(){
     for (Vehicle v : vehicles) {
       if (v instanceof Truck) {
         ((Truck) v).print();
