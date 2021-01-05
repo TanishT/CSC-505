@@ -6,9 +6,7 @@ public class TransportSim {
 
   public TransportSim(ArrayList<Vehicle> in){
     //complete the constructor
-    for (Vehicle v : in) {
-      this.vehicles.add(v);
-    }
+    this.vehicles = in;
   }
 
   public void addVehicle(Vehicle v){
@@ -18,9 +16,9 @@ public class TransportSim {
 
   public void loadTrucks(String item){
     //load the param item into all trucks in the simulation
-    for (Vehicle v : vehicles) {
+    for (Vehicle v : this.vehicles) {
       if (v instanceof Truck) {
-        //need to add to param item
+        //need to add to param item b/c we found a truck and load is only a truck method
         ((Truck) v).load(item);
       }
     }
@@ -28,14 +26,8 @@ public class TransportSim {
 
   public void step(){
     //instruct all vehicles in the simulation to move once
-    for (Vehicle v : vehicles) {
-      if (v instanceof Truck) {
-        ((Truck) v).move();
-      } else if (v instanceof Bicycle) {
-        ((Bicycle) v).move();
-      } else if (v instanceof Auto) {
-        ((Auto) v).move();
-      }
+    for (Vehicle v : this.vehicles) {
+      v.move(); //move method is common among all types of vehicles
     }
   }
 
@@ -47,14 +39,9 @@ public class TransportSim {
   }
 
   public void print(){
-    for (Vehicle v : vehicles) {
-      if (v instanceof Truck) {
-        ((Truck) v).print();
-      } else if (v instanceof Bicycle) {
-        ((Bicycle) v).print();
-      } else if (v instanceof Auto) {
-        ((Auto) v).print();
-      }
+    //call print method for each vechicle, don't need to reinvent the wheel
+    for (Vehicle v : this.vehicles) {
+      v.print();
     }
   }
 }

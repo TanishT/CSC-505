@@ -31,7 +31,7 @@ public class Tester
 
 		//testing code for step method
 		test.step();
-		//System.out.println("\n\n");
+		System.out.println("\n\n");
 		//test.print();
 		
 		//testing code for run method
