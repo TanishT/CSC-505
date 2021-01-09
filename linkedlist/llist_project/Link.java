@@ -1,9 +1,11 @@
+package llist_project;
+
 import java.util.Arrays;
 
 public class Link<E> {
     // attributes
     private E data;
-    private E next;
+    private Link<E> next;
     
     //constructors
     public Link(E d) {
@@ -11,7 +13,7 @@ public class Link<E> {
         next = null;
     }
     
-    public Link(E d, E n) {
+    public Link(E d, Link<E> n) {
         data = d;
         next = n;
     }
@@ -24,11 +26,11 @@ public class Link<E> {
         return data;
     }
     
-    public void setNext(E n) {
+    public void setNext(Link<E> n) {
         next = n;
     }
     
-    public E getNext() {
+    public Link<E> getNext() {
         return next;
     }
 
