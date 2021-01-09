@@ -37,8 +37,7 @@ public class Link<E> {
         //steps:
         //1. organize alphabetically
         //2. set next to value of arr[i+1]
-        String[] vals;
-        vals = (String[]) Array.newInstance(String.class, arr.length);
+        String[] vals = new String[arr.length];
         for (int i = 0; i < arr.length; i++) {
             vals[i] = (String) arr[i].data;
         }

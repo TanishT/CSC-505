@@ -10,3 +10,7 @@ b) Write java code that orders the three Links in alphabetical order
 c) Finally, write code that would remove the middle link (the Link containing Banana in this case) leaving Apple -> Jackfruit
 
 d) Try to repeat the above using only a single Link variable
+
+use get next and set next repeatedly
+link<string> a = new link<STring> ("Apple");
+a.setNext(new Link<String>("banana"));
