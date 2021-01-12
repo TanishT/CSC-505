@@ -30,8 +30,19 @@ public class LList<E> {
     public String toString() {
         StringBuilder linkedList = new StringBuilder();
         Link<E> curr = head;
-        while (curr.getNext() != null) {
-            String data = curr.getData() + "-->" + curr.getNext().getData();
+        boolean done = false;
+        while (done == false) {
+            if (curr.getNext() == null) {
+                done = true;
+                linkedList.append("-->null");
+                break;
+            }
+            String data = "";
+            if (curr == head) {
+                data = curr.getData() + "-->" + curr.getNext().getData();
+            } else {
+               data = "-->" + curr.getNext().getData();
+            }
             linkedList.append(data);
             curr = curr.getNext();
         }
