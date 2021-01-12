@@ -14,11 +14,15 @@ public class LList<E> {
 
     //add a new Link that contains newData to the end of this list
     public void append(E newData) {
-        Link<E> temp = head;
-        while (temp.getNext() != null) {
-            temp = temp.getNext();
+        if (head == null) {
+            head = new Link<E>(newData);
+        } else {
+            Link<E> temp = head;
+            while (temp.getNext() != null) {
+                temp = temp.getNext();
+            }
+            temp.setNext(new Link<E>(newData));
         }
-        temp.setNext(new Link<E>(newData));
     }
 
     //adds a new link to the beginning of the list
@@ -30,10 +34,8 @@ public class LList<E> {
     public String toString() {
         StringBuilder linkedList = new StringBuilder();
         Link<E> curr = head;
-        boolean done = false;
-        while (done == false) {
+        while (true) {
             if (curr.getNext() == null) {
-                done = true;
                 linkedList.append("-->null");
                 break;
             }
