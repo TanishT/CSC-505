@@ -1,7 +1,5 @@
 package llist_project;
 
-import java.lang.StringBuilder;
-
 public class LList<E> {
     //attributes
     //head must always refer (point) to the first link in the list.
@@ -17,24 +15,41 @@ public class LList<E> {
     }
 
     //add a new Link that contains newData to the end of this list
+    // if size == 0, do we want the head/tail to point to the same thing or shld the tail only get it?
     public void append(E newData) {
-        if (head == null) {
+        if (size == 0) {
+            tail = new Link<E>(newData);
             head = new Link<E>(newData);
         } else {
-            Link<E> temp = head;
-            while (temp.getNext() != null) {
-                temp = temp.getNext();
-            }
-            temp.setNext(new Link<E>(newData));
+            Link<E> temp = new Link<E>(newData);
+            tail.setNext(temp);
+            tail = temp;
         }
         size++;
     }
 
     //adds a new link to the beginning of the list
     public void prepend(E d) {
-        Link<E> temp = head;
-        head = new Link<E>(d, temp);
+        if (size == 0) {
+            head = tail = new Link<E>(d);
+        } else {  
+            Link<E> temp = head;
+            head = new Link<E>(d, temp);
+        }
         size++;
+    }
+
+    //Add value to the list at position index.
+    //When index is out of bounds, do nothing.
+    public void insert(int index, E value) {
+
+    }
+
+    
+
+    //return the number of items in the list
+    public int size() {
+        return size;
     }
 
     public String toString() {
@@ -61,7 +76,9 @@ public class LList<E> {
         LList<String> list = new LList<String>();
         list.prepend("Apple");
         list.prepend("Banana");
-        list.append("Jackfruit");
+        list.prepend("Jackfruit");
+        list.append("Orange");
         System.out.println(list.toString());
+        System.out.println(list.size());
     }
 }
