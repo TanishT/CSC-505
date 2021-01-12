@@ -66,11 +66,26 @@ public class LList<E> {
 
     //Remove and return the value at position index from the list.
     //When index is out of bounds, return null.
-    //public E remove(int index) {
-    //    if (index > size || index < 0) {
-    //        throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds");
-    //    } 
-    //}
+    public E remove(int index) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds");
+        } 
+        if (index == 0) {
+            E ret = head.getData();
+            head = head.getNext();
+            size--;
+            return ret;
+        } 
+        Link<E> curr = head;
+        for (int i = 0; i < index-1; i++) {
+            curr = curr.getNext();
+        } 
+        E ret = curr.getNext().getData();
+        curr.setNext(curr.getNext().getNext());
+        
+        size--;
+        return ret;
+    }
 
     //Return the value at position index.
     public E get(int index) {
@@ -124,7 +139,6 @@ public class LList<E> {
             }
             linkedList.append(data);
             curr = curr.getNext();
-            System.out.println(curr.getNext());
         }
         return linkedList.toString();
     }
@@ -142,5 +156,8 @@ public class LList<E> {
         System.out.println(list.toString());
         list.insert(0, "testing");
         System.out.println(list.toString());
+        String remove = list.remove(0);
+        System.out.println(list.toString());
+        System.out.println(list.size());
     }
 }
