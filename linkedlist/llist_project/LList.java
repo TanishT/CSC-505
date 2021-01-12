@@ -41,40 +41,35 @@ public class LList<E> {
     //Add value to the list at position index.
     //When index is out of bounds, do nothing.
     public void insert(int index, E value) {
-
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds");
+        } 
+        if (index == 0) {
+            prepend(value);
+        } else {
+            Link<E> add = new Link<E>(value);
+            Link<E> curr = head;
+            for (int i = 0; i < index-1; i++) {
+                curr = curr.getNext();
+            }
+            Link<E> temp = curr.getNext();
+            curr.setNext(add);
+            add.setNext(temp);
+            size++;
+        }
     }
-
-    
 
     //return the number of items in the list
     public int size() {
         return size;
     }
 
-    public String toString() {
-        StringBuilder linkedList = new StringBuilder();
-        Link<E> curr = head;
-        while (true) {
-            if (curr.getNext() == null) {
-                linkedList.append(" --> null");
-                break;
-            }
-            String data = "";
-            if (curr == head) {
-                data = curr.getData() + " --> " + curr.getNext().getData();
-            } else {
-               data = " --> " + curr.getNext().getData();
-            }
-            linkedList.append(data);
-            curr = curr.getNext();
-        }
-        return linkedList.toString();
-    }
-
     //Remove and return the value at position index from the list.
     //When index is out of bounds, return null.
     //public E remove(int index) {
-//
+    //    if (index > size || index < 0) {
+    //        throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds");
+    //    } 
     //}
 
     //Return the value at position index.
@@ -113,6 +108,27 @@ public class LList<E> {
         return old;
     }
 
+    public String toString() {
+        StringBuilder linkedList = new StringBuilder();
+        Link<E> curr = head;
+        while (true) {
+            if (curr.getNext() == null) {
+                linkedList.append(" --> null");
+                break;
+            }
+            String data = "";
+            if (curr == head) {
+                data = curr.getData() + " --> " + curr.getNext().getData();
+            } else {
+               data = " --> " + curr.getNext().getData();
+            }
+            linkedList.append(data);
+            curr = curr.getNext();
+            System.out.println(curr.getNext());
+        }
+        return linkedList.toString();
+    }
+
     public static void main(String[] args) {
         LList<String> list = new LList<String>();
         list.prepend("Apple");
@@ -123,6 +139,8 @@ public class LList<E> {
         System.out.println(list.size());
         System.out.println(list.get(3));
         System.out.println(list.set(3, "3"));
+        System.out.println(list.toString());
+        list.insert(0, "testing");
         System.out.println(list.toString());
     }
 }
