@@ -6,3 +6,5 @@ Includes:
 - Java Review (Coding Bat Problems) <br/>
 - Quiz_1 Code <br/>
 - Transport Simulation Project
+- Linked List Project (created a singly linked list from scratch)
+
