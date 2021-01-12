@@ -95,9 +95,23 @@ public class LList<E> {
     //Modify the data at index to replace it with value
     //return the old value
     //when index is out of bounds, return null
-    //public E set(int index, E value) {
-//
-    //}
+    public E set(int index, E value) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds");
+        } 
+        if (index < size - 1) {
+            Link<E> curr = head;
+            for (int i = 0; i < index; i++) {
+                curr = curr.getNext();
+            }
+            E old = curr.getData();
+            curr.setData(value);
+            return old;
+        }
+        E old = tail.getData();
+        tail.setData(value);
+        return old;
+    }
 
     public static void main(String[] args) {
         LList<String> list = new LList<String>();
@@ -107,6 +121,8 @@ public class LList<E> {
         list.append("Orange");
         System.out.println(list.toString());
         System.out.println(list.size());
-        System.out.println(list.get(2));
+        System.out.println(list.get(3));
+        System.out.println(list.set(3, "3"));
+        System.out.println(list.toString());
     }
 }
