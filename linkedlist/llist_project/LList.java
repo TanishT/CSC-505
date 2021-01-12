@@ -15,7 +15,6 @@ public class LList<E> {
     }
 
     //add a new Link that contains newData to the end of this list
-    // if size == 0, do we want the head/tail to point to the same thing or shld the tail only get it?
     public void append(E newData) {
         if (size == 0) {
             tail = new Link<E>(newData);
@@ -72,6 +71,34 @@ public class LList<E> {
         return linkedList.toString();
     }
 
+    //Remove and return the value at position index from the list.
+    //When index is out of bounds, return null.
+    //public E remove(int index) {
+//
+    //}
+
+    //Return the value at position index.
+    public E get(int index) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds");
+        } 
+        if (index < size - 1) {
+            Link<E> curr = head;
+            for (int i = 0; i < index; i++) {
+                curr = curr.getNext();
+            }
+            return curr.getData();
+        }
+        return tail.getData(); //case if index is for tail value
+    }
+
+    //Modify the data at index to replace it with value
+    //return the old value
+    //when index is out of bounds, return null
+    //public E set(int index, E value) {
+//
+    //}
+
     public static void main(String[] args) {
         LList<String> list = new LList<String>();
         list.prepend("Apple");
@@ -80,5 +107,6 @@ public class LList<E> {
         list.append("Orange");
         System.out.println(list.toString());
         System.out.println(list.size());
+        System.out.println(list.get(2));
     }
 }
