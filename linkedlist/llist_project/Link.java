@@ -1,7 +1,5 @@
 package llist_project;
 
-import java.util.Arrays;
-
 public class Link<E> {
     // attributes
     private E data;

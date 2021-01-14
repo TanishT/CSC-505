@@ -1,5 +1,3 @@
-package llist_project;
-
 public class LList<E> {
     //attributes
     //head must always refer (point) to the first link in the list.
@@ -140,23 +138,5 @@ public class LList<E> {
             curr = curr.getNext();
         }
         return linkedList.toString();
-    }
-
-    public static void main(String[] args) {
-        LList<String> list = new LList<String>();
-        list.prepend("Apple");
-        list.prepend("Banana");
-        list.prepend("Jackfruit");
-        list.append("Orange");
-        System.out.println(list.toString());
-        System.out.println(list.size());
-        System.out.println(list.get(3));
-        System.out.println(list.set(0, "3"));
-        System.out.println(list.toString());
-        list.insert(3, "testing");
-        System.out.println(list.toString());
-        list.remove(0);
-        System.out.println(list.toString());
-        System.out.println(list.size());
     }
 }
