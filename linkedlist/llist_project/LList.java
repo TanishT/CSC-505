@@ -148,12 +148,13 @@ public class LList<E> {
         list.prepend("Banana");
         list.prepend("Jackfruit");
         list.append("Orange");
+        list.append("Cherry");
         System.out.println(list.toString());
         System.out.println(list.size());
-        System.out.println(list.get(3));
+        System.out.println(list.get(0));
         System.out.println(list.set(0, "3"));
         System.out.println(list.toString());
-        list.insert(3, "testing");
+        list.insert(0, "testing");
         System.out.println(list.toString());
         list.remove(0);
         System.out.println(list.toString());
