@@ -1,4 +1,4 @@
-# CSC 505 Code - Data Structures+Algorithms
+# CSC 505
  All my code for winter term 2020-2021 of CS 505 @ PEA
 
 Includes:
