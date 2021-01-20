@@ -143,7 +143,7 @@ public class LList<E> {
     }
 
     public static void main(String[] args) {
-        LList<String> list = new LList<String>();
+        /*LList<String> list = new LList<String>();
         list.prepend("Apple");
         list.prepend("Banana");
         list.prepend("Jackfruit");
@@ -155,9 +155,13 @@ public class LList<E> {
         System.out.println(list.set(0, "3"));
         System.out.println(list.toString());
         list.insert(0, "testing");
-        System.out.println(list.toString());
-        list.remove(0);
-        System.out.println(list.toString());
-        System.out.println(list.size());
+        System.out.println(list.toString());*/
+        LList<String> list2 = new LList<String>();
+        list2.append("Apple");
+        System.out.println(list2.size());
+
+        list2.remove(0);
+        System.out.println(list2.toString());
+
     }
 }
