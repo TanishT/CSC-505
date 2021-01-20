@@ -1,0 +1,31 @@
+{ [ ( ) ( ) ] } --> balanced 
+
+{ < } > --> not balanced 
+
+{] --> not balanced 
+
+{ { { { { {  } } } } } ( ) <> - not balanced 
+
+ 
+
+{ ( } ) < { { } > } 
+
+( {  
+
+ 
+
+Data structure to use: Stack 
+
+Traverse through string (passed in as parameter) 
+
+If (current_char = '{' || '[' || '(' || '<') then add it to stack 
+
+If current_char = '}' || ']' || ')' || '>') then pop the element at the top of the stack 
+
+If (S.pop() is not equal to opening element correspondent of current_char), then return false 
+
+At the end, we can return (S.empty())  
+
+Just doing S.empty() might not work b/c there could be the same number of opening and closing signs, but they might not be in the right order 
+
+Therefore, we have to do a check in the for loop, this is good b/c it also speeds up the algo in some cases b/c it might not have to run through entire for loop.  
