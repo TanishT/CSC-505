@@ -7,5 +7,6 @@ Includes:
  - Quiz_1 Code <br/>
  - Transport Simulation Project
  - Linked List Project (created a singly linked list from scratch)
+ - Syntax Checker Algorithm Implemented with a stack
  - Zipped Files of the projects for submitting on Canvas
 
