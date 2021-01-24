@@ -122,10 +122,53 @@ public class LList<E> {
         return old;
     }
 
-    public String toString() {
+    public void swap(int index) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds");
+        } else if (size < 2) {
+            throw new IndexOutOfBoundsException("not enough  elements in list for swap to take place");
+        }
+        if (index == 0) {
+            //value at idx 1 becomes value at idx 0
+            Link<E> temp = head;
+            head.setData(head.getNext().getData());
+            head.setNext(temp);
+        } else if (index == size - 1) {
+            throw new IndexOutOfBoundsException("cannot swap null with an element");
+        }else {
+            Link<E> curr = head;
+            for (int i = 0; i < index; i++) {
+                curr = curr.getNext();
+            }
+            Link<E> temp = new Link<E>(curr.getData(), curr);
+            System.out.println(temp.getData());
+            Link<E> inFront = curr.getNext();
+            System.out.println(inFront.getData());
+            curr.setData(inFront.getData());
+            inFront.setData(temp.getData());
+        }
+    }
+
+    public boolean removeAll(E value) {
+        Link<E> curr = head;
+        int idx = 0;
+        boolean found = false;
+        for (int i = 0; i < size; i++) {
+            if (curr.getData().equals(value)) {
+                remove(idx);
+                found = true;
+            }
+            curr = curr.getNext();
+            idx++;
+        }
+        return found;
+    }
+
+    /*public String toString() {
         StringBuilder linkedList = new StringBuilder();
         Link<E> curr = head;
-        while (true) {
+        int currSize = 0;
+        while (currSize <= size) {
             if (curr.getNext() == null) {
                 linkedList.append(" --> null");
                 break;
@@ -138,8 +181,24 @@ public class LList<E> {
             }
             linkedList.append(data);
             curr = curr.getNext();
+            System.out.println(curr);
+            currSize++;
         }
         return linkedList.toString();
+    }*/
+
+    public void print(){
+        Link<E> curr = head;
+        int s = 0;
+        while (s <= size) {
+            if (curr == null) {
+                break;
+            }
+            System.out.println(curr.getData() + "-->");
+            curr = curr.getNext();
+            
+            s++;
+        }
     }
 
     public static void main(String[] args) {
@@ -155,13 +214,26 @@ public class LList<E> {
         System.out.println(list.set(0, "3"));
         System.out.println(list.toString());
         list.insert(0, "testing");
-        System.out.println(list.toString());*/
+        System.out.println(list.toString());
         LList<String> list2 = new LList<String>();
         list2.append("Apple");
         System.out.println(list2.size());
 
         list2.remove(0);
-        System.out.println(list2.toString());
+        System.out.println(list2.toString());*/
+        LList<String> list = new LList<String>();
+        list.append("A");
+        list.append("B");
+        list.append("C");
+        list.append("D");
+        list.append("C");
+        list.append("E");
+        //list.prepend("C");
+        list.print();
+
+        list.removeAll("C");
+        System.out.println("\n");
+        list.print();
 
     }
 }
