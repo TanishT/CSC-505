@@ -1,0 +1,10 @@
+parts of a recurse program
+
+base case:
+    The base case returns a value without making any subsequent recursive calls. 
+    It does this for one or more special input values for which the function can be evaluated without recursion. 
+reduction:
+    The reduction step is the central part of a recursive function. 
+    It relates the value of the function at one (or more) input values to the value of the function at one (or more) other input values. 
+    Furthermore, the sequence of input values values must converge to the base case. 
+    For factorial(), the value of n decreases by 1 for each call, so the sequence of input values converges to the base case.
