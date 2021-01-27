@@ -8,5 +8,7 @@ Includes:
  - Transport Simulation Project
  - Linked List Project (created a singly linked list from scratch) + Quiz 2 code 
  - Syntax Checker Algorithm Implemented with a stack
+ - Recursion
+   - Coding Bat Problems
  - Zipped Files of the projects for submitting on Canvas
 
