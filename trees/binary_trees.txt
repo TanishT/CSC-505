@@ -24,6 +24,13 @@ Every parent node in a binary tree has max 2 child nodes.
   /   \      \
  1     6      25    <-- leaves
  
+ there are balancing algos that keep the tree balanced so that it doesn't become a long list - built in most of the time
+ 
+ Traversals:
+ 1. inorder - visit left nodes, then root node, than right nodes
+ 2. preorder - visit root then left nodes than right nodes
+ 3. postorder - visit left than right than root
+ 
  
  Main applications of trees include: 
 1. Manipulate hierarchical data. 
