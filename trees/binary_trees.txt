@@ -3,6 +3,8 @@ Tree Vocabulary: The topmost node is called root of the tree. The elements that 
 The element directly above something is called its parent.
 For example, ‘a’ is a child of ‘f’, and ‘f’ is the parent of ‘a’. Finally, elements with no children are called leaves. 
 
+Every parent node in a binary tree has max 2 child nodes.
+
       tree
       ----
        j    <-- root
@@ -10,6 +12,18 @@ For example, ‘a’ is a child of ‘f’, and ‘f’ is the parent of ‘a’
     f      k  
   /   \      \
  a     h      z    <-- leaves
+ 
+ 
+ binary search trees:
+ nodes are organized in a certain order such that all nodes to left of root are less than root and all nodes to right of root are greater than root
+       binary search tree
+      ----
+       10    <-- root
+     /   \
+    5      20  
+  /   \      \
+ 1     6      25    <-- leaves
+ 
  
  Main applications of trees include: 
 1. Manipulate hierarchical data. 
