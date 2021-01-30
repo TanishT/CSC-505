@@ -3,9 +3,9 @@ package llist_project;
 public class LList<E> {
     //attributes
     //head must always refer (point) to the first link in the list.
-    private Link<E> head;
-    private Link<E> tail; //refers to the last Link in this LList
-    private int size;  //stores the number of items currently in this LList (zero for empty list)
+    protected Link<E> head;
+    protected Link<E> tail; //refers to the last Link in this LList
+    protected int size;  //stores the number of items currently in this LList (zero for empty list)
 
     //constructor
     public LList () {
@@ -74,7 +74,7 @@ public class LList<E> {
             head = head.getNext();
             size--;
             return ret;
-        } 
+        }
         Link<E> curr = head;
         for (int i = 0; i < index-1; i++) {
             curr = curr.getNext();
