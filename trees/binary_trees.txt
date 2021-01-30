@@ -1,0 +1,42 @@
+Trees: Unlike Arrays, Linked Lists, Stack and queues, which are linear data structures, trees are hierarchical data structures.
+Tree Vocabulary: The topmost node is called root of the tree. The elements that are directly under an element are called its children. 
+The element directly above something is called its parent.
+For example, ‘a’ is a child of ‘f’, and ‘f’ is the parent of ‘a’. Finally, elements with no children are called leaves. 
+
+Every parent node in a binary tree has max 2 child nodes.
+
+      tree
+      ----
+       j    <-- root
+     /   \
+    f      k  
+  /   \      \
+ a     h      z    <-- leaves
+ 
+ 
+ binary search trees:
+ nodes are organized in a certain order such that all nodes to left of root are less than root and all nodes to right of root are greater than root
+       binary search tree
+      ----
+       10    <-- root
+     /   \
+    5      20  
+  /   \      \
+ 1     6      25    <-- leaves
+ 
+ there are balancing algos that keep the tree balanced so that it doesn't become a long list - built in most of the time
+ 
+ Traversals:
+ 1. inorder - visit left nodes, then root node, than right nodes
+ 2. preorder - visit root then left nodes than right nodes
+ 3. postorder - visit left than right than root
+ 
+ binary trees use inorder traversal most of the time
+ 
+ Main applications of trees include: 
+1. Manipulate hierarchical data. 
+2. Make information easy to search (see tree traversal). 
+3. Manipulate sorted lists of data. 
+4. As a workflow for compositing digital images for visual effects. 
+5. Router algorithms 
+6. Form of a multi-stage decision-making (see business chess). 
