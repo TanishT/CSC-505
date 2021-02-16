@@ -12,7 +12,7 @@ Includes:
  - Recursion
    - Coding Bat Problems
 * Bullet list
-              * Nested bullet
+ * Nested bullet
                   * Sub-nested bullet etc
           * Bullet list item 2
  - Zipped Files of the projects for submitting on Canvas
