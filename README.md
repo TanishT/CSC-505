@@ -11,7 +11,9 @@ Includes:
  - Syntax Checker Algorithm Implemented with a stack
  - Recursion
    - Coding Bat Problems
- - Trees
-  - Notes on Binary Trees and BSTs
+* Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
  - Zipped Files of the projects for submitting on Canvas
 
