@@ -12,7 +12,7 @@ Includes:
  - Recursion
    - Coding Bat Problems
  - Binary and Binary Search Trees
-  - notes on Binary Trees and BSTs
-  - Creating a Binary Tree from scratch
+  - Notes on Binary Trees and BSTs
+ - Creating a Binary Tree from scratch
  - Zipped Files of the projects for submitting on Canvas
 
