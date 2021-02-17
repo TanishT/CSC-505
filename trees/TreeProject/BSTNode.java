@@ -5,14 +5,11 @@ public class BSTNode<E extends Comparable<E>> {
     
     BSTNode (E v) {
         value = v;
-        left = null;
-        right = null;
+        left = right = null;
     }
     
     BSTNode() {
-        value = null;
-        left = null;
-        right = null;
+        value = left = right = null;
     }
     
     public E getValue(){
