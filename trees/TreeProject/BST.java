@@ -1,4 +1,4 @@
-public class BST<E> {
+public class BST {
 
     public static void main(String[] args) {
         BSTNode<String> a = new BSTNode<String>("apple");
