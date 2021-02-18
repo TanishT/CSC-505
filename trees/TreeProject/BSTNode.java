@@ -8,16 +8,6 @@ public class BSTNode<E extends Comparable<E>> {
         left = right = null;
     }
     
-    // public BSTNode() {
-    //     value = left = right = null;
-    // }
-
-    // public BSTNode(E v, BSTNode<E> l, BSTNode<E> r) {
-    //     value = v;
-    //     left = l;
-    //     right = r;
-    // }
-    
     public E getValue(){
         return value;
     }
