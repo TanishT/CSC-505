@@ -1,38 +1,48 @@
 public class BSTNode<E extends Comparable<E>> {
-    E value;
-    BSTNode left;
-    BSTNode right;
+    private E value;
+    private BSTNode<E> left;
+    private BSTNode<E> right;
     
-    BSTNode (E v) {
+    public BSTNode (E v) {
         value = v;
         left = right = null;
     }
     
-    BSTNode() {
-        value = left = right = null;
-    }
+    // public BSTNode() {
+    //     value = left = right = null;
+    // }
+
+    // public BSTNode(E v, BSTNode<E> l, BSTNode<E> r) {
+    //     value = v;
+    //     left = l;
+    //     right = r;
+    // }
     
     public E getValue(){
         return value;
     }
     
-    public BSTNode getLeft(){
+    public BSTNode<E> getLeft(){
         return left;
     }
     
-    public BSTNode getRight(){
+    public BSTNode<E> getRight(){
         return right;
     }
     
-    public E setValue(E n){
+    public void setValue(E n){
         value = n;
     }
     
-    public BSTNode setLeft(BSTNode n){
+    public void setLeft(BSTNode<E> n){
         left = n;
     }
     
-    public BSTNode setRight(BSTNode n){
+    public void setRight(BSTNode<E> n){
         right = n;
+    }
+
+    public boolean isLeaf() {
+        return (this.left == null && this.right == null);
     }
 }
