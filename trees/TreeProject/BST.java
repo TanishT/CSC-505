@@ -10,17 +10,20 @@ public class BST<E> {
         b.setLeft(a);
         c.setRight(d);
         
-        System.out.println(method(c));
+        System.out.println(printTree(c));
     }
 
-    public static String method(BSTNode<String> rt){
+    /* DFS */
+    public static String printTree(BSTNode<String> rt){
         if(rt == null){
+            //occurs when we hit a leaf node --> backtrack to previous node and add val to traversal
+            //also search right subtree if it exists
             return "";
         } else{
             String out = "";
-            out += method(rt.getLeft());
+            out += printTree(rt.getLeft()); //searching left subtree
             out += " " + rt.getValue() + " ";
-            out += method(rt.getRight());
+            out += printTree(rt.getRight()); //searching right substree
             return out;
         }
     }
