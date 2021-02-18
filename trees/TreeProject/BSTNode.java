@@ -45,4 +45,18 @@ public class BSTNode<E extends Comparable<E>> {
     public boolean isLeaf() {
         return (this.left == null && this.right == null);
     }
+
+    public int countLeaves(BSTNode<E> rt) {
+        if(rt == null){
+            return 0;
+        } else {
+            int ans = 0;
+            if (rt.isLeaf()) {
+                ans++;
+            }
+            ans += countLeaves(rt.getLeft());
+            ans += countLeaves(rt.getRight());
+            return ans;
+        }
+    }
 }

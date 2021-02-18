@@ -11,6 +11,7 @@ public class BST<E> {
         c.setRight(d);
         
         System.out.println(printTree(c));
+        System.out.println(b.countLeaves(b));
     }
 
     /* DFS */
