@@ -10,21 +10,21 @@ public class BST {
         b.setLeft(a);
         c.setRight(d);
         
-        System.out.println(printTree(c));
+        System.out.println(inorder(c));
         System.out.println(b.countLeaves(b));
     }
 
-    /* DFS */
-    public static String printTree(BSTNode<String> rt){
+    /* DFS more or less */
+    public static String inorder(BSTNode<String> rt){
         if(rt == null){
             //occurs when we hit a leaf node --> backtrack to previous node and add val to traversal
             //also search right subtree if it exists
             return "";
         } else{
             String out = "";
-            out += printTree(rt.getLeft()); //searching left subtree
+            out += inorder(rt.getLeft()); //searching left subtree
             out += " " + rt.getValue() + " ";
-            out += printTree(rt.getRight()); //searching right substree
+            out += inorder(rt.getRight()); //searching right subtree
             return out;
         }
     }
