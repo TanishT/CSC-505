@@ -1,5 +1,5 @@
 # CSC 505
- All my code for winter term 2020-2021 of CSC-505 (Data Structres + Algorithms) @ Phillips Exeter Academy
+ All my code for winter term 2020-2021 of CSC-505 (Data Structures + Algorithms) @ Phillips Exeter Academy
 
 Includes:
  - OOP HW  <br/>
