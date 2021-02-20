@@ -36,32 +36,7 @@ public class BSTNode<E extends Comparable<E>> {
         return (this.left == null && this.right == null);
     }
 
-    public int countLeaves(BSTNode<E> rt) {
-        if(rt == null){
-            return 0;
-        } else {
-            int ans = 0;
-            if (rt.isLeaf()) {
-                ans++;
-            }
-            ans += countLeaves(rt.getLeft());
-            ans += countLeaves(rt.getRight());
-            return ans;
-        }
-    }
-
-    /* DFS more or less */
-    public String inorder(BSTNode<E> rt){
-        if(rt == null){
-            //occurs when we hit a leaf node --> backtrack to previous node and add val to traversal
-            //also search right subtree if it exists
-            return "";
-        } else{
-            String out = "";
-            out += inorder(rt.getLeft()); //searching left subtree
-            out += " " + rt.getValue() + " ";
-            out += inorder(rt.getRight()); //searching right subtree
-            return out;
-        }
+    public String print(){
+        return "value --> " + value + " , left --> " + left + " , right --> " + right;
     }
 }
