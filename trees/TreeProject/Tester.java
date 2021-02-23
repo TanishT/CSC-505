@@ -13,15 +13,15 @@ public class Tester {
         // System.out.println(b.countLeaves(b));
 
         BST<String> tree = new BST<String>();
-        tree.insert("apple");
-        tree.insert("banana");
-        tree.insert("coconut");
         tree.insert("durian");
+        tree.insert("coconut");
+        tree.insert("banana");
+        tree.insert("apple");
         tree.insert("orange");
 
-        System.out.println(tree.countLeaves(tree.getRoot()));
+        System.out.println(tree.countLeaves());
         System.out.println(tree.getRoot().print());
-        System.out.println(tree.inorder(tree.getRoot()));
+        System.out.println(tree.inorder());
     }
 
     

@@ -41,6 +41,10 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    public int countLeaves() {
+        return countLeaves(root);
+    }
+
     public int countLeaves(BSTNode<E> rt) {
         if(rt == null){
             return 0;
@@ -53,6 +57,10 @@ public class BST<E extends Comparable<E>> {
             ans += countLeaves(rt.getRight());
             return ans;
         }
+    }
+
+    public String inorder(){
+        return inorder(root);
     }
 
     /* DFS more or less */

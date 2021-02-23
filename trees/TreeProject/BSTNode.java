@@ -37,6 +37,6 @@ public class BSTNode<E extends Comparable<E>> {
     }
 
     public String print(){
-        return "value --> " + value + " , left --> " + left + " , right --> " + right;
+        return "value --> " + value + " , left --> " + left.getValue() + " , right --> " + right.getValue();
     }
 }
