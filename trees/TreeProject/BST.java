@@ -1,5 +1,3 @@
-import jdk.jfr.BooleanFlag;
-
 public class BST<E extends Comparable<E>> {
     private BSTNode<E> root;
     private int size;
