@@ -29,9 +29,13 @@ public class BST<E extends Comparable<E>> {
         }
         //recursive case
         else {
-            if( value.compareTo(rt.getValue()) > 0 ) {
+            if( value.compareTo(rt.getValue()) > 0) {
                 //go right
                 rt.setRight( insert(rt.getRight(), value) );
+            } 
+            else if (value.compareTo(rt.getValue()) == 0) {
+                System.out.println("duplicate element"); //ask what to do --> return exception??
+                //return null;
             }
             else {
                 //go left

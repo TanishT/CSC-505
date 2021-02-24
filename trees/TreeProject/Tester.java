@@ -12,10 +12,15 @@ public class Tester {
         // System.out.println(c.inorder(c));
         // System.out.println(b.countLeaves(b));
 
+        //tree test
         BST<String> tree = new BST<String>();
         tree.insert("durian");
         tree.insert("coconut");
         tree.insert("banana");
+
+        //duplicate element test
+        tree.insert("coconut");
+
         tree.insert("apple");
         tree.insert("orange");
 
