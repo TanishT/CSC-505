@@ -14,12 +14,28 @@ public class BST<E extends Comparable<E>> {
     public BSTNode<E> getRoot(){
         return root;
     }
-    
-    public int countLeaves() {
+
+	public int height() {
+		int h = height(root);
+		return h;
+	}
+
+	private int height(BSTNode<E> rt){
+		if(rt == null){
+            return -1;
+        } else {
+			int l = height(rt.getLeft());
+			int r = height(rt.getRight());
+			int height = Math.max(l,r) + 1;
+			return height;
+        }
+	}
+
+	public int countLeaves() {
         return countLeaves(root);
     }
 
-    public int countLeaves(BSTNode<E> rt) {
+    private int countLeaves(BSTNode<E> rt) {
         if(rt == null){
             return 0;
         } else {
@@ -91,7 +107,7 @@ public class BST<E extends Comparable<E>> {
     }
 
     /* DFS more or less */
-    public String inorder(BSTNode<E> rt){
+    private String inorder(BSTNode<E> rt){
         if(rt == null){
             //occurs when we hit a leaf node --> backtrack to previous node and add val to traversal
             //also search right subtree if it exists

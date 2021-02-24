@@ -30,6 +30,9 @@ public class Tester {
 
         //find method test
         System.out.println(tree.find("apple"));
+
+        //height method test
+        System.out.println(tree.height());
     }
 
     
