@@ -27,6 +27,9 @@ public class Tester {
         System.out.println(tree.countLeaves());
         System.out.println(tree.getRoot().print());
         System.out.println(tree.inorder());
+
+        //find method test
+        System.out.println(tree.find("apple"));
     }
 
     

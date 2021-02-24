@@ -15,36 +15,6 @@ public class BST<E extends Comparable<E>> {
         return root;
     }
     
-    //add the parameter value to the tree
-    public void insert(E value) {
-        root = insert(root, value);
-        size++;
-    }
-    
-    //helper method for insert
-    private BSTNode<E> insert(BSTNode<E> rt, E value) {
-        //base case
-        if (rt == null) {
-            return new BSTNode<E>(value);
-        }
-        //recursive case
-        else {
-            if( value.compareTo(rt.getValue()) > 0) {
-                //go right
-                rt.setRight( insert(rt.getRight(), value) );
-            } 
-            else if (value.compareTo(rt.getValue()) == 0) {
-                System.out.println("duplicate element"); //ask what to do --> return exception??
-                //return null;
-            }
-            else {
-                //go left
-                rt.setLeft( insert(rt.getLeft(), value) );
-            }
-            return rt;
-        }
-    }
-
     public int countLeaves() {
         return countLeaves(root);
     }
@@ -62,6 +32,59 @@ public class BST<E extends Comparable<E>> {
             return ans;
         }
     }
+
+	//add the parameter value to the tree
+    public void insert(E value) {
+        root = insert(root, value);
+        size++;
+    }
+    
+    //helper method for insert
+    private BSTNode<E> insert(BSTNode<E> rt, E value) {
+        //base case
+        if (rt == null) {
+            return new BSTNode<E>(value);
+        }
+        //recursive case
+        else {
+            if( value.compareTo(rt.getValue()) > 0) {
+                //go right
+                rt.setRight( insert(rt.getRight(), value) );
+            } else if (value.compareTo(rt.getValue()) == 0) {
+                System.out.println("duplicate element"); //ask what to do --> return exception??
+            } else {
+                //go left
+                rt.setLeft( insert(rt.getLeft(), value) );
+            }
+            return rt;
+        }
+    }
+
+	public boolean find(E value) {
+		boolean found = find(root, value);
+		return found;
+	} 
+
+	private boolean find(BSTNode<E> rt, E value) {
+		//base case
+        if (rt == null) {
+            return false;
+        }
+        //recursive case
+        else {
+			boolean found = false;
+            if( value.compareTo(rt.getValue()) > 0) {
+                //go right
+                found = find(rt.getRight(), value);
+            } else if (value.compareTo(rt.getValue()) == 0) {
+                return true;
+            } else {
+                //go left
+                found = find(rt.getLeft(), value);
+            }
+            return found;
+        }
+	}
 
     public String inorder(){
         return inorder(root);
