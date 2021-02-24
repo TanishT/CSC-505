@@ -16,13 +16,15 @@ public class Tester {
         BST<String> tree = new BST<String>();
         tree.insert("durian");
         tree.insert("coconut");
-        tree.insert("banana");
+        //tree.insert("banana");
 
         //duplicate element test
-        tree.insert("coconut");
+        //tree.insert("coconut");
 
-        tree.insert("apple");
+        //tree.insert("apple");
         tree.insert("orange");
+        tree.insert("xylophone");
+        tree.insert("elephant");
 
         System.out.println(tree.countLeaves());
         System.out.println(tree.getRoot().print());
@@ -33,6 +35,11 @@ public class Tester {
 
         //height method test
         System.out.println(tree.height());
+
+        //perfect method test --> ask 
+        System.out.println(tree.perfect());
+
+        //System.out.println(tree.height() +" , " + tree.leftMostDepth(tree.getRoot()));
     }
 
     

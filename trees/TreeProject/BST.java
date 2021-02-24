@@ -1,3 +1,5 @@
+import jdk.jfr.BooleanFlag;
+
 public class BST<E extends Comparable<E>> {
     private BSTNode<E> root;
     private int size;
@@ -48,6 +50,33 @@ public class BST<E extends Comparable<E>> {
             return ans;
         }
     }
+
+	public boolean perfect(){
+		boolean perfect = perfect(root, leftMostDepth(root), 0);
+		return perfect;
+	}
+
+	public int leftMostDepth(BSTNode<E> rt){
+		int depth = 0;
+		while (rt != null) {
+			depth++;
+			rt = rt.getLeft();
+		}
+		return depth;
+	}
+
+	private boolean perfect(BSTNode<E> rt, int leftDepth, int currDepth) {
+		if (rt == null) {
+			return true;
+		} else if (rt.getLeft() == null && rt.getRight() == null) {
+			//leaf node
+			return (leftDepth == currDepth + 1);
+		} else if (rt.getLeft() == null || rt.getRight() == null) {
+			//node has 1 child node, not perfect
+			return false;
+		}
+		return perfect(rt.getLeft(), leftDepth, currDepth + 1) && perfect(rt.getRight(), leftDepth, currDepth + 1);
+	}
 
 	//add the parameter value to the tree
     public void insert(E value) {
