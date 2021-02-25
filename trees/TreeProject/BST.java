@@ -1,4 +1,4 @@
-public class BST<E extends Comparable<E>> {
+public class BST<E extends Comparable<E> > {
     private BSTNode<E> root;
     private int size;
     
