@@ -67,6 +67,20 @@ public class BST<E extends Comparable<E> > {
 		return perfect(rt.getLeft(), height, currDepth + 1) && perfect(rt.getRight(), height, currDepth + 1);
 	}
 
+    public boolean isBalanced() {
+        boolean balanced = isBalanced(root);
+        return balanced;
+    }
+
+    private boolean isBalanced(BSTNode<E> rt) {
+        if (rt == null) {
+            return true;
+        }
+        int l = height(rt.getLeft()); 
+        int r = height(rt.getRight());
+        return Math.abs(l-r) <= 1;
+    }
+
 	//add the parameter value to the tree
     public void insert(E value) {
         root = insert(root, value);

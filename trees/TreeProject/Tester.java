@@ -25,6 +25,8 @@ public class Tester {
         tree.insert("orange");
         tree.insert("xylophone");
         tree.insert("elephant");
+        tree.insert("yellow");
+        tree.insert("zebra");
 
         System.out.println(tree.countLeaves());
         System.out.println(tree.getRoot().print());
@@ -38,6 +40,25 @@ public class Tester {
 
         //perfect method test 
         System.out.println(tree.perfect());
+
+        System.out.println(tree.isBalanced());
+
+        //go through tree2 and make sure its balanced at certain places and not placed in certain places --> ask tmr in class
+        BST<Integer> tree2 = new BST<Integer>();
+        tree2.insert(9);
+        tree2.insert(5);
+        tree2.insert(4);
+        tree2.insert(7);
+        tree2.insert(6);
+        tree2.insert(8);
+        //tree2.insert(10);
+        //tree2.insert(12);
+        //tree2.insert(15);
+        //tree2.insert(11);
+        //tree2.insert(13);
+
+        //balanced tree test
+        System.out.println(tree2.isBalanced());
 
         //System.out.println(tree.height() +" , " + tree.leftMostDepth(tree.getRoot()));
     }
