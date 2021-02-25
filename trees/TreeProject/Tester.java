@@ -36,7 +36,7 @@ public class Tester {
         //height method test
         System.out.println(tree.height());
 
-        //perfect method test --> ask 
+        //perfect method test 
         System.out.println(tree.perfect());
 
         //System.out.println(tree.height() +" , " + tree.leftMostDepth(tree.getRoot()));
