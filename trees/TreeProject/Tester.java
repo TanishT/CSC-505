@@ -60,6 +60,11 @@ public class Tester {
         //balanced tree test
         System.out.println(tree2.isBalanced());
 
+        //deleting node test - WHAT SHOULD I RETURN
+        System.out.println(tree2.delete(8));
+        System.out.println(tree2.delete(5));
+        System.out.println(tree2.inorder());
+
         //System.out.println(tree.height() +" , " + tree.leftMostDepth(tree.getRoot()));
     }
 

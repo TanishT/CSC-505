@@ -108,6 +108,60 @@ public class BST<E extends Comparable<E> > {
         }
     }
 
+    public E delete(E val) {
+        BSTNode<E> v = delete(root, val);
+        return v.getValue();
+    }
+
+    private E findSmallest(BSTNode<E> rt) {
+        return rt.getLeft() == null ? rt.getValue() : findSmallest(rt.getLeft());
+    }
+
+    //what should we be returning for delete???
+    private BSTNode<E> delete(BSTNode<E> rt, E val) {
+        if (val == null) {
+            throw new NullPointerException();
+        }
+        if (rt == null) {
+            return null;
+        } else {
+            E v = null;
+            if (val.compareTo(rt.getValue()) > 0) {
+                //go right
+                rt.setRight(delete(rt.getRight(), val));
+            } else if (val.compareTo(rt.getValue()) == 0) {
+                //found, now need to delete
+                System.out.println("found");
+                if (rt.getLeft() == null && rt.getRight() == null){
+                    //leaf node
+                    System.out.println("leaf");
+                    E ret = rt.getValue();
+                    //rt = null;
+                    return null;
+                } else if (rt.getLeft() != null && rt.getRight() != null) {
+                    //has 2 children
+                    E smallestV = findSmallest(rt.getRight());
+                    rt.setValue(smallestV);
+                    rt.setRight(delete(rt.getRight(), smallestV));
+                    return rt;   
+                } else if (rt.getRight() != null) {
+                    //has 1 child
+                    rt = rt.getRight();
+                    return new BSTNode<E>(val);             
+                }else if (rt.getLeft() != null) {
+                    //has 1 child
+                    rt = rt.getLeft();
+                    return new BSTNode<E>(val);       
+                }
+            } else {
+                //go left
+                rt.setLeft(delete(rt.getLeft(), val));
+            }
+            size--;
+            return rt;
+        }
+    }
+
 	public boolean find(E value) {
 		boolean found = find(root, value);
 		return found;
