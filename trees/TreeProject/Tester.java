@@ -1,3 +1,8 @@
+/* questions for mr.campbell
+1. is the height for an empty tree -1 or 0?
+2. 
+*/
+
 public class Tester {
     public static void main(String[] args) {
         // BSTNode<String> a = new BSTNode<String>("apple");
@@ -95,6 +100,10 @@ public class Tester {
         //System.out.println(tree2.find(12));
 
         //System.out.println(tree.height() +" , " + tree.leftMostDepth(tree.getRoot()));
+
+        // stress testing
+        BST<Integer> tree3 = new BST<Integer>();
+        System.out.println(tree3.height());
     }
 
     
