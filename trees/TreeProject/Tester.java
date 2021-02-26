@@ -104,6 +104,25 @@ public class Tester {
         // stress testing
         BST<Integer> tree3 = new BST<Integer>();
         System.out.println(tree3.height());
+
+        tree3.insert(10);
+        tree3.insert(12);
+        tree3.insert(15);
+        tree3.insert(11);
+        tree3.insert(13);
+        System.out.println(tree3.getRoot().getRight().getRight().print());
+        System.out.println(tree3.inorder() + " inorder");
+        tree3.insert(10);
+        tree3.insert(12);
+        tree3.insert(15);
+        tree3.insert(13);
+        tree3.insert(10);
+        tree3.insert(10);
+        tree3.insert(13);
+        System.out.println(tree3.inorder() + " inorder");
+        System.out.println(tree3.getSize() + " size");
+
+
     }
 
     

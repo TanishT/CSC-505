@@ -84,9 +84,7 @@ public class BST<E extends Comparable<E> > {
 	//add the parameter value to the tree
     public void insert(E value) {
         root = insert(root, value);
-        if (root != null) {
-            size++;
-        }
+        size++;
     }
     
     //helper method for insert
@@ -101,7 +99,8 @@ public class BST<E extends Comparable<E> > {
                 //go right
                 rt.setRight( insert(rt.getRight(), value) );
             } else if (value.compareTo(rt.getValue()) == 0) {
-                return null; //System.out.println("duplicate element"); //ask what to do --> return exception??
+                size--; //don't want size to increment
+                return rt; //System.out.println("duplicate element"); //ask what to do --> return exception??
             } else {
                 //go left
                 rt.setLeft( insert(rt.getLeft(), value) );
