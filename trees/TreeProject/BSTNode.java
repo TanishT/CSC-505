@@ -37,6 +37,14 @@ public class BSTNode<E extends Comparable<E>> {
     }
 
     public String print(){
-        return "value --> " + value + " , left --> " + left.getValue() + " , right --> " + right.getValue();
+        String node = "";
+        node += "value --> " + value;
+        if (left != null) {
+            node += " , left --> " + left.getValue();
+        } 
+        if (right != null) {
+            node += " , right --> " + right.getValue();
+        }
+        return node; //"value --> " + value + " , left --> " + left.getValue() + " , right --> " + right.getValue();
     }
 }

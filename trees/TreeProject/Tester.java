@@ -13,35 +13,35 @@ public class Tester {
         // System.out.println(b.countLeaves(b));
 
         //tree test
-        BST<String> tree = new BST<String>();
-        tree.insert("durian");
-        tree.insert("coconut");
-        //tree.insert("banana");
+        // BST<String> tree = new BST<String>();
+        // tree.insert("durian");
+        // tree.insert("coconut");
+        // //tree.insert("banana");
 
-        //duplicate element test
-        //tree.insert("coconut");
+        // //duplicate element test
+        // //tree.insert("coconut");
 
-        //tree.insert("apple");
-        tree.insert("orange");
-        tree.insert("xylophone");
-        tree.insert("elephant");
-        tree.insert("yellow");
-        tree.insert("zebra");
+        // //tree.insert("apple");
+        // tree.insert("orange");
+        // tree.insert("xylophone");
+        // tree.insert("elephant");
+        // tree.insert("yellow");
+        // tree.insert("zebra");
 
-        System.out.println(tree.countLeaves());
-        System.out.println(tree.getRoot().print());
-        System.out.println(tree.inorder());
+        // System.out.println(tree.countLeaves());
+        // System.out.println(tree.getRoot().print());
+        // System.out.println(tree.inorder());
 
-        //find method test
-        System.out.println(tree.find("apple"));
+        // //find method test
+        // System.out.println(tree.find("apple"));
 
-        //height method test
-        System.out.println(tree.height());
+        // //height method test
+        // System.out.println(tree.height());
 
-        //perfect method test 
-        System.out.println(tree.perfect());
+        // //perfect method test 
+        // System.out.println(tree.perfect());
 
-        System.out.println(tree.isBalanced());
+        // System.out.println(tree.isBalanced());
 
         //go through tree2 and make sure its balanced at certain places and not placed in certain places --> ask tmr in class
         BST<Integer> tree2 = new BST<Integer>();
@@ -60,10 +60,27 @@ public class Tester {
         //balanced tree test
         System.out.println(tree2.isBalanced());
 
-        //deleting node test - WHAT SHOULD I RETURN
+        //deleting node test
         System.out.println(tree2.delete(8));
         System.out.println(tree2.delete(5));
-        System.out.println(tree2.inorder());
+        System.out.println(tree2.inorder() + "        8, 5");
+        System.out.println(tree2.getRoot().print());
+
+        System.out.println(tree2.delete(4));
+        System.out.println(tree2.inorder() + "        4");
+        System.out.println(tree2.getRoot().print());
+
+        System.out.println(tree2.delete(6));
+        System.out.println(tree2.inorder()+ "        6");
+
+        System.out.println(tree2.delete(7));
+        System.out.println(tree2.inorder()+ "        7");
+        System.out.println(tree2.delete(10));
+        System.out.println(tree2.inorder()+ "        10");
+
+
+        //System.out.println(tree2.delete(12));
+        //System.out.println(tree2.find(12));
 
         //System.out.println(tree.height() +" , " + tree.leftMostDepth(tree.getRoot()));
     }
