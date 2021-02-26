@@ -67,16 +67,22 @@ public class Tester {
         System.out.println(tree2.getRoot().print());
 
         System.out.println(tree2.delete(4));
-        System.out.println(tree2.inorder() + "        4");
-        System.out.println(tree2.getRoot().print());
+        // System.out.println(tree2.inorder() + "        4");
+        // System.out.println(tree2.getRoot().print());
+        System.out.println(tree2.getSize() + " size");
 
         System.out.println(tree2.delete(6));
-        System.out.println(tree2.inorder()+ "        6");
+        // System.out.println(tree2.inorder()+ "        6");
+        System.out.println(tree2.getSize() + " size");
 
         System.out.println(tree2.delete(7));
-        System.out.println(tree2.inorder()+ "        7");
+        // System.out.println(tree2.inorder()+ "        7");
+        System.out.println(tree2.getSize() + " size");
+
         System.out.println(tree2.delete(10));
-        System.out.println(tree2.inorder()+ "        10");
+        // System.out.println(tree2.inorder()+ "        10");
+        System.out.println(tree2.getSize() + " size");
+
 
 
         //System.out.println(tree2.delete(12));

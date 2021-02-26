@@ -84,7 +84,9 @@ public class BST<E extends Comparable<E> > {
 	//add the parameter value to the tree
     public void insert(E value) {
         root = insert(root, value);
-        size++;
+        if (root != null) {
+            size++;
+        }
     }
     
     //helper method for insert
@@ -99,7 +101,7 @@ public class BST<E extends Comparable<E> > {
                 //go right
                 rt.setRight( insert(rt.getRight(), value) );
             } else if (value.compareTo(rt.getValue()) == 0) {
-                System.out.println("duplicate element"); //ask what to do --> return exception??
+                return null; //System.out.println("duplicate element"); //ask what to do --> return exception??
             } else {
                 //go left
                 rt.setLeft( insert(rt.getLeft(), value) );
@@ -111,6 +113,7 @@ public class BST<E extends Comparable<E> > {
     public E delete(E val) {
         BSTNode<E> v = delete(root, val);
         if (v != null) {
+            size--;
             return val;
         } else {
             return null;
@@ -118,15 +121,13 @@ public class BST<E extends Comparable<E> > {
     }
 
     private E findSmallest(BSTNode<E> rt) {
+        //logic: smallest is gonna be in leftmost possible pos of tree, so need to go there
         if (rt.getLeft() != null)  {
             return findSmallest(rt.getLeft());  
         } else  {
             return rt.getValue();  
         }
     }
-
-    //what should we be returning for delete???
-    //if val not pressent, return null
 
     private BSTNode<E> delete(BSTNode<E> rt, E val) {
         if (val == null) {
@@ -140,31 +141,26 @@ public class BST<E extends Comparable<E> > {
                 rt.setRight(delete(rt.getRight(), val));
             } else if (val.compareTo(rt.getValue()) == 0) {
                 //found, now need to delete
-                //System.out.println("found");
                 if (rt.getLeft() == null && rt.getRight() == null){
                     //leaf node
-                    //System.out.println("leaf");
                     rt = null;
                 } else if (rt.getLeft() != null && rt.getRight() != null) {
                     //has 2 children
                     E smallestV = findSmallest(rt.getRight());
                     rt.setValue(smallestV);
                     rt.setRight(delete(rt.getRight(), smallestV));
-                    //return rt;   
                 } else if (rt.getRight() == null) {
                     //has 1 child
                     rt = rt.getLeft();
-                    //return new BSTNode<E>(val);             
                 }else if (rt.getLeft() == null) {
                     //has 1 child
                     rt = rt.getRight();
-                    //return new BSTNode<E>(val);       
                 }
             } else {
                 //go left
                 rt.setLeft(delete(rt.getLeft(), val));
             }
-            size--;
+            
             return rt;
         }
     }
