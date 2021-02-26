@@ -110,8 +110,8 @@ public class BST<E extends Comparable<E> > {
     }
 
     public E delete(E val) {
-        BSTNode<E> v = delete(root, val);
-        if (v != null) {
+        root = delete(root, val);
+        if (root != null) {
             size--;
             return val;
         } else {
@@ -154,6 +154,7 @@ public class BST<E extends Comparable<E> > {
                 }else if (rt.getLeft() == null) {
                     //has 1 child
                     rt = rt.getRight();
+                    System.out.println(rt.print());
                 }
             } else {
                 //go left

@@ -1,6 +1,7 @@
 /* questions for mr.campbell
 1. is the height for an empty tree -1 or 0?
-2. 
+2. what should we return if a node we are trying to insert is already there?
+3. i noticed that insert is a void and delete is E. Is that correct and if so, what is the reason/
 */
 
 public class Tester {
@@ -110,8 +111,10 @@ public class Tester {
         tree3.insert(15);
         tree3.insert(11);
         tree3.insert(13);
+
         System.out.println(tree3.getRoot().getRight().getRight().print());
         System.out.println(tree3.inorder() + " inorder");
+
         tree3.insert(10);
         tree3.insert(12);
         tree3.insert(15);
@@ -122,6 +125,16 @@ public class Tester {
         System.out.println(tree3.inorder() + " inorder");
         System.out.println(tree3.getSize() + " size");
 
+        tree3.delete(10);
+        System.out.println(tree3.inorder() + " inorder");
+        System.out.println(tree3.getRoot().print());
+        
+        tree3.delete(12);
+        tree3.delete(15);
+        System.out.println(tree3.inorder() + " inorder");
+        System.out.println(tree3.getSize() + " size");
+
+        System.out.println(tree3.getRoot().print());
 
     }
 
