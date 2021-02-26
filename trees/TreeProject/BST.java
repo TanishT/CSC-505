@@ -118,7 +118,11 @@ public class BST<E extends Comparable<E> > {
     }
 
     private E findSmallest(BSTNode<E> rt) {
-        return rt.getLeft() == null ? rt.getValue() : findSmallest(rt.getLeft());
+        if (rt.getLeft() != null)  {
+            return findSmallest(rt.getLeft());  
+        } else  {
+            return rt.getValue();  
+        }
     }
 
     //what should we be returning for delete???
