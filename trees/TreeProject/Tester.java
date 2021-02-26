@@ -46,42 +46,48 @@ public class Tester {
         //go through tree2 and make sure its balanced at certain places and not placed in certain places --> ask tmr in class
         BST<Integer> tree2 = new BST<Integer>();
         tree2.insert(9);
+        //System.out.println(tree2.getSize() + " size");
         tree2.insert(5);
+        //System.out.println(tree2.getSize() + " size");
         tree2.insert(4);
-        tree2.insert(7);
-        tree2.insert(6);
-        tree2.insert(8);
+        //System.out.println(tree2.getSize() + " size");
+        // tree2.insert(7);
+        // tree2.insert(6);
+        // tree2.insert(8);
         //tree2.insert(10);
         //tree2.insert(12);
         //tree2.insert(15);
         //tree2.insert(11);
         //tree2.insert(13);
+        tree2.insert(9);
+        //System.out.println(tree2.getSize() + " size");
 
-        //balanced tree test
-        System.out.println(tree2.isBalanced());
 
-        //deleting node test
-        System.out.println(tree2.delete(8));
-        System.out.println(tree2.delete(5));
-        System.out.println(tree2.inorder() + "        8, 5");
-        System.out.println(tree2.getRoot().print());
+        // //balanced tree test
+        // System.out.println(tree2.isBalanced());
 
-        System.out.println(tree2.delete(4));
-        // System.out.println(tree2.inorder() + "        4");
+        // //deleting node test
+        // System.out.println(tree2.delete(8));
+        // System.out.println(tree2.delete(5));
+        // System.out.println(tree2.inorder() + "        8, 5");
         // System.out.println(tree2.getRoot().print());
-        System.out.println(tree2.getSize() + " size");
 
-        System.out.println(tree2.delete(6));
-        // System.out.println(tree2.inorder()+ "        6");
-        System.out.println(tree2.getSize() + " size");
+        // System.out.println(tree2.delete(4));
+        // // System.out.println(tree2.inorder() + "        4");
+        // // System.out.println(tree2.getRoot().print());
+        // System.out.println(tree2.getSize() + " size");
 
-        System.out.println(tree2.delete(7));
-        // System.out.println(tree2.inorder()+ "        7");
-        System.out.println(tree2.getSize() + " size");
+        // System.out.println(tree2.delete(6));
+        // // System.out.println(tree2.inorder()+ "        6");
+        // System.out.println(tree2.getSize() + " size");
 
-        System.out.println(tree2.delete(10));
-        // System.out.println(tree2.inorder()+ "        10");
-        System.out.println(tree2.getSize() + " size");
+        // System.out.println(tree2.delete(7));
+        // // System.out.println(tree2.inorder()+ "        7");
+        // System.out.println(tree2.getSize() + " size");
+
+        // System.out.println(tree2.delete(10));
+        // // System.out.println(tree2.inorder()+ "        10");
+        // System.out.println(tree2.getSize() + " size");
 
 
 
