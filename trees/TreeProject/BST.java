@@ -1,4 +1,7 @@
-public class BST<E extends Comparable<E> > {
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BST<E extends Comparable<E>> {
     private BSTNode<E> root;
     private int size;
     
@@ -207,6 +210,27 @@ public class BST<E extends Comparable<E> > {
             out += " " + rt.getValue() + " ";
             out += inorder(rt.getRight()); //searching right subtree
             return out;
+        }
+    }
+
+    public void bfs(){
+        bfs(root);
+    }
+
+    private void bfs(BSTNode<E> root) {
+        Queue<BSTNode<E>> trav = new LinkedList<BSTNode<E>>();
+        trav.add(root);
+        while (!trav.isEmpty()) {
+            BSTNode<E> curr = trav.poll();
+            System.out.print(curr.getValue() + " ");
+ 
+            if (curr.getLeft() != null) {
+                trav.add(curr.getLeft());
+            }
+ 
+            if (curr.getRight() != null) {
+                trav.add(curr.getRight());
+            }
         }
     }
 }

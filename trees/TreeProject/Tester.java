@@ -3,6 +3,7 @@
 2. what should we return if a node we are trying to insert is already there?
 3. i noticed that insert is a void and delete is E. Is that correct and if so, what is the reason?
 4. Is an empty tree a perfect tree and balanced?
+5. does the return type of the bfs have to be a string? or can i make it a void?
 */
 
 public class Tester {
@@ -144,6 +145,8 @@ public class Tester {
         tree4.insert(5);
         tree4.insert(7);
         System.out.println(tree4.height());
+        System.out.println(tree4.inorder());
+        tree4.bfs();
         
 
 
