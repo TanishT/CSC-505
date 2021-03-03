@@ -138,17 +138,34 @@ public class Tester {
 
         // System.out.println(tree3.getRoot().print());
 
-        BST<Integer> tree4 = new BST<Integer>();
-        tree4.insert(10);
-        tree4.insert(6);
-        tree4.insert(12);
-        tree4.insert(5);
-        tree4.insert(7);
-        System.out.println(tree4.height());
-        System.out.println(tree4.inorder());
-        tree4.bfs();
+        // BST<Integer> tree4 = new BST<Integer>();
+        // tree4.insert(10);
+        // tree4.insert(6);
+        // tree4.insert(12);
+        // tree4.insert(5);
+        // tree4.insert(7);
+        // System.out.println(tree4.height());
+        // System.out.println(tree4.inorder());
+        // tree4.bfs();
         
-
+        BST<Integer> tree = new BST<Integer>();
+        tree.insert(10);
+        tree.insert(21);
+        tree.insert(4);
+        //tree.insert(2);
+        tree.insert(7);
+        //tree.insert(5);
+        tree.insert(13);
+        tree.insert(29);
+        // System.out.println(tree.getRoot().print());
+        // System.out.println(tree.getRoot().getLeft().print());
+        // System.out.println(tree.getRoot().getLeft().getRight().print());
+        // System.out.println(tree.inorder());
+        // System.out.println(tree.countParentNodes());
+        //tree.traverse(tree.getRoot());
+        // System.out.println(tree.getRoot().print());
+        // System.out.println(tree.getRoot().getLeft().print());
+        tree.traverse(tree.getRoot());
 
     }
 

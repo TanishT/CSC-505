@@ -44,6 +44,7 @@ public class BST<E extends Comparable<E>> {
         } else {
             int ans = 0;
             if (rt.isLeaf()) {
+                System.out.println(rt.print());
                 ans++;
             }
             ans += countLeaves(rt.getLeft());
@@ -194,6 +195,15 @@ public class BST<E extends Comparable<E>> {
         }
 	}
 
+    public int countParentNodes(){
+        return countParentNodes(root);
+    }
+
+    private int countParentNodes(BSTNode<E> rt) {
+        int leaves = countLeaves(rt);
+        return getSize()-leaves;
+    }
+
     public String inorder(){
         return inorder(root);
     }
@@ -210,6 +220,16 @@ public class BST<E extends Comparable<E>> {
             out += " " + rt.getValue() + " ";
             out += inorder(rt.getRight()); //searching right subtree
             return out;
+        }
+    }
+
+    public void traverse(BSTNode<E> rt)
+    {
+        if (rt != null)
+        {
+            traverse(rt.getRight());
+            System.out.print(" " + rt.getValue() + " ");
+            traverse(rt.getLeft());
         }
     }
 
