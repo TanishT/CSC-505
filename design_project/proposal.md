@@ -16,6 +16,6 @@ I will also understand how to write code that checks for these properties in a g
    - Floodfill
    - Functional Graphs
 5. Apply these algorithms to the following USACO problems:
-    - http://www.usaco.org/index.php?page=viewproblem2&cpid=895 (Floodfill)
-    - http://www.usaco.org/index.php?page=viewproblem2&cpid=570 (FloodFill)
-    - http://www.usaco.org/index.php?page=viewproblem2&cpid=764 (Functional Graphs)
+    - Icy Perimeter: http://www.usaco.org/index.php?page=viewproblem2&cpid=895 (Floodfill)
+    - Switching on the Lights: http://www.usaco.org/index.php?page=viewproblem2&cpid=570 (FloodFill)
+    - The Bovine Shuffle: http://www.usaco.org/index.php?page=viewproblem2&cpid=764 (Functional Graphs)
