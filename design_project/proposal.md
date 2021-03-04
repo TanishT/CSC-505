@@ -5,3 +5,6 @@ I am interested in exploring different methods of storing data in a graph (adjac
 Steps of my project:
 1. Review different methods of traversing a graph (DFS/BFS).
 2. Understand different methods of storing data in a graph. I will understand the pros and cons of all storage methods and implement them in code.
+3. Learn and understand the graph properties below:
+ - test
+ - test
