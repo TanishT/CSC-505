@@ -14,3 +14,8 @@ Steps of my project:
 I will also understand how to write code that checks for these properties in a graph.
 4. Learn, understand, and implement the following graph algorithms:
    - Floodfill
+   - Functional Graphs
+5. Apply these algorithms to the following USACO problems:
+    - http://www.usaco.org/index.php?page=viewproblem2&cpid=895 (Floodfill)
+    - http://www.usaco.org/index.php?page=viewproblem2&cpid=570 (FloodFill)
+    - http://www.usaco.org/index.php?page=viewproblem2&cpid=764 (Functional Graphs)
