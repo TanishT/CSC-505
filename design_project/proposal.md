@@ -10,5 +10,5 @@ Steps of my project:
    - Weights
    - Directed and Undirected
    - Neighbors and Degrees
-   - Colorings
+   - Colorings <br>
   I will also understand how to write code that checks for these properties in a graph.
