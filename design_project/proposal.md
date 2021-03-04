@@ -11,3 +11,4 @@ Steps of my project:
    - Directed and Undirected
    - Neighbors and Degrees
    - Colorings
+  I will also understand how to write code that checks for these properties in a graph.
