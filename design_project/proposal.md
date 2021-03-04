@@ -12,3 +12,5 @@ Steps of my project:
    - Neighbors and Degrees
    - Colorings <br>
 I will also understand how to write code that checks for these properties in a graph.
+4. Learn, understand, and implement the following graph algorithms:
+   - Floodfill
