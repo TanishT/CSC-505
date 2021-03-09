@@ -11,7 +11,7 @@ Steps of my project:
    - Directed and Undirected
    - Neighbors and Degrees
    - Colorings <br>
-I will also understand how to write code that checks for these properties in a graph.
+I will also understand how to write code that checks for these properties in a graph. 
 4. Learn, understand, and implement the following graph algorithms:
    - Floodfill
    - Functional Graphs
@@ -19,8 +19,4 @@ I will also understand how to write code that checks for these properties in a g
     - Icy Perimeter: http://www.usaco.org/index.php?page=viewproblem2&cpid=895 (Floodfill)
     - Switching on the Lights: http://www.usaco.org/index.php?page=viewproblem2&cpid=570 (FloodFill)
     - The Bovine Shuffle: http://www.usaco.org/index.php?page=viewproblem2&cpid=764 (Functional Graphs)
-
-
-
-
-MAKEFILE
+<br> I will be learning all of this material from the usaco.guide website
