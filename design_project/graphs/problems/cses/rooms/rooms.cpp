@@ -27,9 +27,18 @@ int n, m; // grid dimensions, rows and columns
 bool visited[MAXN][MAXM]; // keeps track of which nodes have been visited
 int ans = 0; // reset to 0 each time we start a new component
 
+void setIO(string name, bool includeout=false) { // name is nonempty for USACO file I/O
+    ios_base::sync_with_stdio(0); cin.tie(0); // see Fast Input & Output
+    // alternatively, cin.tie(0)->sync_with_stdio(0);
+    freopen((name+".in").c_str(), "r", stdin); // see Input & Output
+    if (includeout) {
+        freopen((name+".out").c_str(), "w", stdout);
+    }
+}
+
 void floodfill(int r, int c){
 	if(r < 0 || r >= n || c < 0 || c >= m) return; // if outside grid
-    if (grid[r][c] == '#') return;
+	if (grid[r][c] == '#') return;
 	if(visited[r][c]) return; // already visited this square
 	visited[r][c] = true; // mark current square as visited
 	// recursively call floodfill for neighboring squares
@@ -40,22 +49,23 @@ void floodfill(int r, int c){
 }
 
 int main(){
+	setIO("rooms");
 	cin >> n >> m;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            char a;
-            cin >> a;
-            grid[i][j] = a;
-        }
-    }
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+		    char a;
+		    cin >> a;
+		    grid[i][j] = a;
+		}
+	}
 	for(int i = 0; i < n; i++){
 		for(int j = 0; j < m; j++){
 			if(!visited[i][j] && grid[i][j] == '.'){
 				floodfill(i, j);
-                ans++;
+				ans++;
 			}
 		}
 	}
-    cout << ans << endl;
+	cout << ans << endl;
 	return 0;
 }
