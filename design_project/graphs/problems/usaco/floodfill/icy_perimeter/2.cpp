@@ -50,8 +50,9 @@ void floodfill(int r, int c){
 	floodfill(r+1, c);
 }
 
+
 int main(){
-    setIO("perimeter", true);
+    setIO("perimeter");
 	cin >> n;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
