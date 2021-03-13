@@ -65,7 +65,7 @@ void floodfill(int r, int c){
 }
 
 int main() {
-    setIO("lightson", true);
+    setIO("lightson");
     cin >> n >> m;
     lit[0][0] = true;
     for (int i = 0; i < m; i++) {
