@@ -15,6 +15,15 @@ int adjList[maxn];
 int visited[maxn] = {0};
 int n;
 
+void setIO(string name, bool includeout=false) { // name is nonempty for USACO file I/O
+    ios_base::sync_with_stdio(0); cin.tie(0); // see Fast Input & Output
+    // alternatively, cin.tie(0)->sync_with_stdio(0);
+    freopen((name+".in").c_str(), "r", stdin); // see Input & Output
+    if (includeout) {
+        freopen((name+".out").c_str(), "w", stdout);
+    }
+}
+
 void dfs(int src) {
     if (visited[src]) {
         cout << src + 1 << " ";
@@ -25,6 +34,7 @@ void dfs(int src) {
 }
 
 int main(){
+    setIO("B");
     cin >> n;
     for (int i = 0; i < n; i++) {
         int a;
