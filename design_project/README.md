@@ -4,13 +4,19 @@
 Link to problems solved:
 1. Graph Properties
     - Building Teams (CSES Problemset) - https://cses.fi/problemset/task/1668
+        - can be found in graphs/problems/cses/bipartite_graphs
 2. Floodfill
     - Counting Rooms (CSES Problemset) - https://cses.fi/problemset/task/1192
+        - can be found in graphs/problems/cses/floodfill
     - Switching on the Lights (USACO) - http://www.usaco.org/index.php?page=viewproblem2&cpid=570
+        - can be found in graphs/problems/usaco/floodfill/switching_on_the_lights
     - Icy Perimeter (USACO) - http://www.usaco.org/index.php?page=viewproblem2&cpid=895
+        - can be found in graphs/problems/usaco/floodfill/icy_perimeter
 3. Functional Graphs
      - Badge (Codeforces) - https://codeforces.com/problemset/problem/1020/B
+        - can be found in graphs/problems/codeforces/func_graphs
      - The Bovine Shuffle (USACO) - http://www.usaco.org/index.php?page=viewproblem2&cpid=764
+        - can be found in graphs/problems/codeforces/func_graphs/the_bovine_shuffle
 
 ## Steps for Running Code
 1. Download and extract zip folder in a desired file location
