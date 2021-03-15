@@ -1,5 +1,7 @@
 ## User Guide for Tanish Tyagi Design Project
 
+
+## Steps for Running Code
 1. Download and extract zip folder in a desired file location
 2. Navigate to graphs/problems/(which is the location of all solution files)
 3. Run desired files
